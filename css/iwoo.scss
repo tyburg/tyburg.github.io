@@ -1,0 +1,40 @@
+---
+---
+
+html, body {
+    background-color: #000;
+    color: #fff;
+    font-size: 100%;
+}
+
+header {
+    height: 44px;
+    border-bottom: solid 1px #2a2a2a;
+}
+
+.button {
+    background: #1F61DF;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-size: 17px;
+}
+
+.seat {
+    background: no-repeat url(/projects/iwoo/img/seat2.png);
+    background-size: contain;
+    height: 350px;
+    position: relative;
+}
+
+.wooer {
+    z-index: 1;
+    height: 250px;
+    width: auto;
+}
+
+.laptop {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

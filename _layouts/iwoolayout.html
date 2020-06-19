@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/iwoo.css">
+    <title>{{ page.title }}</title>
+</head>
+
+<header>
+    <h2 class="mb-3">TB</h2>
+</header>
+
+<body>
+    {{ content }}
+</body>
+
+<audio id="woo-small-clip">
+    <source src="/projects/iwoo/sound/small.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="woo-medium-clip">
+    <source src="/projects/iwoo/sound/medium.mp3" type="audio/mpeg">
+</audio>
+
+<script src="/js/anime.min.js" type="text/javascript"></script>
+<script>
+    document.getElementById("woo-small").addEventListener("click", function (event) {
+        console.log("small woo");
+        event.preventDefault();
+        var wooers = document.getElementsByClassName("wooer");
+        var smallClip = document.getElementById("woo-small-clip");
+        smallClip.play();
+
+        var x = Math.random() * (10 - 5) + 5;
+        var y = Math.random() * (10 - 5) + 5;
+
+        anime({
+            targets: '.wooer',
+            translateY: [
+                { value: y },
+                { value: y * -1 },
+                { value: 0 },
+                { value: y },
+                { value: y * -1 },
+                { value: 0 },
+            ],
+            translateX: [
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+            ],
+            loop: 1,
+            duration: '1000',
+            delay: function (target, index) {
+                return index * 50;
+            },
+            easing: 'linear',
+        });
+    })
+
+
+    document.getElementById("woo-medium").addEventListener("click", function (event) {
+        console.log("medium woo");
+        event.preventDefault();
+        var wooers = document.getElementsByClassName("wooer");
+        var mediumClip = document.getElementById("woo-medium-clip");
+        mediumClip.play();
+
+
+        var x = Math.random() * (30 - 10) + 10;
+        var y = Math.random() * (20 - 10) + 10;
+
+        anime({
+            targets: '.wooer',
+            translateY: [
+                { value: y },
+                { value: y * -1 },
+                { value: 0 },
+                { value: y },
+                { value: y * -1 },
+                { value: 0 },
+                { value: y },
+                { value: y * -1 },
+                { value: 0 },
+            ],
+            translateX: [
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+                { value: x },
+                { value: x * -1 },
+                { value: 0 },
+            ],
+            loop: 2,
+            duration: '2100',
+            delay: function (target, index) {
+                return index * 50;
+            },
+            easing: 'linear',
+        });
+    })
+
+
+    document.getElementById("woo-large").addEventListener("click", function (event) {
+        console.log("large woo");
+        event.preventDefault();
+        var wooers = document.getElementsByClassName("wooer");
+
+        Array.prototype.forEach.call(wooers, function (wooer) {
+            anime({
+                targets: wooer,
+                translateY: Math.random() * (40 - 10) + 10,
+                translateX: Math.random() * (40 - 10) + 10,
+                loop: 2,
+                direction: 'alternate',
+            });
+        });
+    })
+
+
+    document.getElementById("woo-zomg").addEventListener("click", function (event) {
+        console.log("zomg woo");
+        event.preventDefault();
+        var wooers = document.getElementsByClassName("wooer");
+
+        Array.prototype.forEach.call(wooers, function (wooer) {
+            anime({
+                targets: wooer,
+                translateY: Math.random() * (40 - 10) + 10,
+                translateX: Math.random() * (40 - 10) + 10,
+                loop: 2,
+                direction: 'alternate',
+            });
+        });
+    })
+
+
+</script>
+
+</html>
