@@ -70,33 +70,33 @@ header {
     .seat {
         background: no-repeat url(/projects/iwoo/img/seat2.png);
         background-size: contain;
-        height: 175px;
+        height: 125px;
         position: relative;
     }
     
     .wooer {
         z-index: 1;
-        height: 150px;
+        height: 100px;
         width: auto;
     }
     
     .middle-row {
         .wooer {
-            height: 125px;
+            height: 75px;
         }
     
         .seat {
-            height: 150px;
+            height: 100px;
         }
     }
     
     .back-row {
         .wooer {
-            height: 100px;
+            height: 70px;
         } 
     
         .seat {
-            height: 125px;
+            height: 90px;
         }
     }
     
