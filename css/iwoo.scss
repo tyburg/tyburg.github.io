@@ -32,9 +32,39 @@ header {
     width: auto;
 }
 
+.middle-row {
+    .wooer {
+        height: 225px;
+    }
+
+    .seat {
+        height: 325px;
+    }
+}
+
+.back-row {
+    .wooer {
+        height: 200px;
+    } 
+
+    .seat {
+        height: 300px;
+    }
+}
+
 .laptop {
     z-index: 2;
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+@media (max-width: 640px) {
+    .button {
+        background: #1F61DF;
+        border-radius: 20px;
+        padding: 12px 36px;
+        font-size: 17px;
+    }
+    
 }
