@@ -66,5 +66,38 @@ header {
         padding: 12px 36px;
         font-size: 17px;
     }
+
+    .seat {
+        background: no-repeat url(/projects/iwoo/img/seat2.png);
+        background-size: contain;
+        height: 175px;
+        position: relative;
+    }
+    
+    .wooer {
+        z-index: 1;
+        height: 150px;
+        width: auto;
+    }
+    
+    .middle-row {
+        .wooer {
+            height: 125px;
+        }
+    
+        .seat {
+            height: 150px;
+        }
+    }
+    
+    .back-row {
+        .wooer {
+            height: 100px;
+        } 
+    
+        .seat {
+            height: 125px;
+        }
+    }
     
 }
