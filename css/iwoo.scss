@@ -32,23 +32,33 @@ header {
     width: auto;
 }
 
-.middle-row {
+.second-row {
     .wooer {
         height: 225px;
     }
 
     .seat {
-        height: 325px;
+        height: 300px;
     }
 }
 
-.back-row {
+.third-row {
     .wooer {
         height: 200px;
     } 
 
     .seat {
-        height: 300px;
+        height: 275px;
+    }
+}
+
+.fourth-row {
+    .wooer {
+        height: 175px;
+    } 
+
+    .seat {
+        height: 225px;
     }
 }
 
@@ -80,7 +90,7 @@ header {
         width: auto;
     }
     
-    .middle-row {
+    .second-row {
         .wooer {
             height: 75px;
         }
@@ -90,13 +100,33 @@ header {
         }
     }
     
-    .back-row {
+    .third-row {
         .wooer {
             height: 70px;
         } 
     
         .seat {
             height: 90px;
+        }
+    }
+
+    .third-row {
+        .wooer {
+            height: 70px;
+        } 
+    
+        .seat {
+            height: 90px;
+        }
+    }
+
+    .fourth-row {
+        .wooer {
+            height: 60px;
+        } 
+    
+        .seat {
+            height: 80px;
         }
     }
     
