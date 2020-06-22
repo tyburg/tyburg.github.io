@@ -2,21 +2,14 @@
 layout: default
 ---
 
-<section id="main">
-    <header>
-        <h1 class="text-3xl">Writing</h1>
-    </header>
+<div class="container mx-auto center my-16">
+    <div class="grid grid-cols-1 w-2/3 mx-auto">
+        <h1 class="text-4xl">Writing</h1>
+        {% for e in site.external_feed %}
+        <a href="{{e.url}}" class="text-xl">{{e.title}}</a>
+        {% endfor %}
+    </div>
 
-    {% for e in site.external_feed %}
-    <h2 class="text-xl">{{e.title}}</h2>
 
-    {% endfor %}
-</section>
 
-<section class="special">
-    <ul class="actions">
-        <li>
-            <a href="{{ site.baseurl }}{{ e.url }}" class="button {% cycle '', 'alt' %}">Read More</a>
-        </li>
-    </ul>
-</section>
+</div>

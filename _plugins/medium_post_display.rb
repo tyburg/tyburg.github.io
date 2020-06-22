@@ -21,13 +21,15 @@ module Jekyll
         guid = e[:url]
         path = "./external_feed/" + title + ".md"
         path = site.in_source_dir(path)
-        
-        p "doc makin"
-        doc = Jekyll::Document.new(path, {:site => site, :collection => jekyll_coll})
-        doc.data['title'] = title;
-        doc.data['feed_content'] = content;
-        
-        jekyll_coll.docs << doc
+
+        if e.categories.size > 0
+          p "doc makin"
+          doc = Jekyll::Document.new(path, {:site => site, :collection => jekyll_coll})
+          doc.data['title'] = title;
+          doc.data['feed_content'] = content;
+          
+          jekyll_coll.docs << doc
+        end
       end
     end
   end

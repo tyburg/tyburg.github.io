@@ -11,8 +11,17 @@ header {
     height: 44px;
     border-bottom: solid 1px #2a2a2a;
     color: #333;
+
+    img {
+        max-height: 24px;
+    }
 }
 
 .project {
     background-color: #fafafa;
+
+    a {
+        color: #fff;
+    }
 }
+
